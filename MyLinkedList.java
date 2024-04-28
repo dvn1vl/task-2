@@ -10,7 +10,7 @@ public class MyLinkedList<E> implements MyList<E> {
             this.prev = null;
         }
     }
-
+//functionality all the same but code is another
     private MyNode head;
     private MyNode tail;
     private int size;

@@ -6,18 +6,18 @@ public class MyQueue<E> {
     public MyQueue(MyList<E> list) {
         this.list = list;
     }
-
+//adding the element in the end
     public void enqueue(E element) {
         list.add(element);
     }
-
+//removing element in the start
     public E dequeue() {
         if (list.isEmpty()) {
             throw new NoSuchElementException();
         }
         return list.remove(0);
     }
-
+//getting the starter element
     public E peek() {
         if (list.isEmpty()) {
             throw new NoSuchElementException();

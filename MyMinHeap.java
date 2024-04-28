@@ -6,12 +6,12 @@ public class MyMinHeap<E extends Comparable<E>> {
     public MyMinHeap(MyList<E> list) {
         this.list = list;
     }
-
+//adding the element the end
     public void insert(E element) {
         list.add(element);
         heapifyUp();
     }
-
+//getting min from the list
     public E extractMin() {
         if (list.isEmpty()) {
             throw new NoSuchElementException();
@@ -24,7 +24,7 @@ public class MyMinHeap<E extends Comparable<E>> {
         }
         return min;
     }
-
+    //getting the min from the array
     public E getMin() {
         if (list.isEmpty()) {
             throw new NoSuchElementException();

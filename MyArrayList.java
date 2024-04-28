@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+//initialize size
 public class MyArrayList<E> implements MyList<E> {
     private static final int DEFAULT_CAPACITY = 10;
     private Object[] elements;
@@ -15,6 +15,7 @@ public class MyArrayList<E> implements MyList<E> {
         ensureCapacity();
         elements[size++] = element;
     }
+    //adding element in the end of array
 
     @Override
     public void add(int index, E element) {
@@ -26,7 +27,7 @@ public class MyArrayList<E> implements MyList<E> {
         elements[index] = element;
         size++;
     }
-
+//adding element in array by index
     @Override
     public E get(int index) {
         if (index < 0 || index >= size) {
@@ -34,7 +35,7 @@ public class MyArrayList<E> implements MyList<E> {
         }
         return (E) elements[index];
     }
-
+    //getting element by index
     @Override
     public E remove(int index) {
         if (index < 0 || index >= size) {
@@ -45,7 +46,7 @@ public class MyArrayList<E> implements MyList<E> {
         size--;
         return removedElement;
     }
-
+//removing element by index
     @Override
     public int size() {
         return size;
@@ -55,7 +56,7 @@ public class MyArrayList<E> implements MyList<E> {
     public boolean isEmpty() {
         return size == 0;
     }
-
+//checking is array is empty
     @Override
     public boolean contains(E element) {
         for (int i = 0; i < size; i++) {
@@ -90,7 +91,7 @@ public class MyArrayList<E> implements MyList<E> {
         }
         elements[index] = element;
     }
-
+//setting the element
     private void ensureCapacity() {
         if (size == elements.length) {
             int newCapacity = elements.length * 2;

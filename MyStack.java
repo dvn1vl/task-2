@@ -6,17 +6,18 @@ public class MyStack<E> {
     public MyStack(MyList<E> list) {
         this.list = list;
     }
-
+//pushing element in the end
     public void push(E element) {
         list.add(element);
     }
-
+//deleting the element from the end
     public E pop() {
         if (list.isEmpty()) {
             throw new EmptyStackException();
         }
         return list.remove(list.size() - 1);
     }
+    //getting the element in the end
 
     public E peek() {
         if (list.isEmpty()) {
